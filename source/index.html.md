@@ -19,12 +19,12 @@ search: true
 
 # Introduction
 
-Welcome to the CoinDCX API!
+Welcome to the COSMEX API!
 <aside class="notice">The base URL for the API calls is `https://api.cosmex.com`, base URL for some public endpoint is `https://public.cosmex.com`. However, it will only be used where it is exclusively mentioned in the documentation. </aside>
 
 You can get your API key and Secret as follows
 <ul>
-  <li>Go to your CoinDCX profile section</li>
+  <li>Go to your COSMEX profile section</li>
   <li>Click `Access API dashboard`</li>
   <li>Click Create API key button and follow the process of verifications</li>
 </ul>
@@ -40,7 +40,7 @@ You can get your API key and Secret as follows
 * `pair` uniquely idenfies the market along with it's exchange, and is available in market details api.
 * `ecode` is used to specify the exchange for the given market. Valid values for ecode include:
   - `B`: Binance
-  - `I`: CoinDCX
+  - `I`: COSMEX
   - `HB`: HitBTC
   - `H`: Huobi
   - `BM`: BitMEX
@@ -251,7 +251,7 @@ print(data)
   <li>base_currency_precision - Number of decimals accepted for the base currency</li>
   <li>target_currency_precision - Number of decimals accepted for the target currency</li>
   <li>step - It is the minimum increment accepted for the target currency</li>
-  <li>ecode - (Exchange code) It is the unique identifier for exchanges available on CoinDCX. For example: B(Binance), HB(HITBTC)  </li>
+  <li>ecode - (Exchange code) It is the unique identifier for exchanges available on COSMEX. For example: B(Binance), HB(HITBTC)  </li>
   <li>pair - It is a string created by (ecode, target_currency_short_name, base_currency_short_name). It can be used to connect to DcxStreams socket for API trading.</li>
 </ul>
 
@@ -1003,7 +1003,7 @@ You can only have a maximum of <strong>25 open orders</strong> at a time for one
 ## Create multiple orders
 
 <aside class="notice">
-Multiple ordering API is only supported for CoinDCX INR markets. Set ecode parameter to <code>I</code>
+Multiple ordering API is only supported for COSMEX INR markets. Set ecode parameter to <code>I</code>
 </aside>
 
 ```ruby
@@ -2023,7 +2023,7 @@ import json
 import time
 import requests
 
-# Enter your API Key and Secret here. If you don't have one, you can generate it from CoinDCX website.
+# Enter your API Key and Secret here. If you don't have one, you can generate it from COSMEX website.
 key = "XXXX"
 secret = "YYYY"
 
@@ -2133,7 +2133,7 @@ import json
 import time
 import requests
 
-# Enter your API Key and Secret here. If you don't have one, you can generate it from CoinDCX website.
+# Enter your API Key and Secret here. If you don't have one, you can generate it from COSMEX website.
 key = "XXXX"
 secret = "YYYY"
 
@@ -2532,7 +2532,7 @@ import json
 import time
 import requests
 
-# Enter your API Key and Secret here. If you don't have one, you can generate it from CoinDCX website.
+# Enter your API Key and Secret here. If you don't have one, you can generate it from COSMEX website.
 key = "XXXX"
 secret = "YYYY"
 
@@ -2971,7 +2971,7 @@ import json
 import time
 import requests
 
-# Enter your API Key and Secret here. If you don't have one, you can generate it from CoinDCX website.
+# Enter your API Key and Secret here. If you don't have one, you can generate it from COSMEX website.
 key = "XXXX"
 secret = "YYYY"
 
@@ -4350,7 +4350,7 @@ socket.on("new-trade", (response) => {
 
 Get your API key and Secret by simply following these steps:
 <ul>
-  <li>Go to the profile section on CoinDCX</li>
+  <li>Go to the profile section on COSMEX</li>
   <li>Click on `Access API dashboard`</li>
   <li>Click on `Create API key` and follow the process of verification</li>
 </ul>
