@@ -1,5 +1,5 @@
-ruby '2.5.0'
-source 'https://rubygems.org'
+ruby '2.5.8'
+source 'http://rubygems.org'
 
 # Middleman
 gem 'middleman', '~>4.2.1'
@@ -9,3 +9,4 @@ gem "middleman-sprockets", "~> 4.1.0"
 gem 'rouge', '~> 2.0.5'
 gem 'redcarpet', '~> 3.4.0'
 gem 'nokogiri', '~> 1.6.8'
+gem 'ffi', '~> 1.9.17'

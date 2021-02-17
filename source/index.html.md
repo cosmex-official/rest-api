@@ -20,7 +20,7 @@ search: true
 # Introduction
 
 Welcome to the CoinDCX API!
-<aside class="notice">The base URL for the API calls is `https://api.coindcx.com`, base URL for some public endpoint is `https://public.coindcx.com`. However, it will only be used where it is exclusively mentioned in the documentation. </aside>
+<aside class="notice">The base URL for the API calls is `https://api.cosmex.com`, base URL for some public endpoint is `https://public.cosmex.com`. However, it will only be used where it is exclusively mentioned in the documentation. </aside>
 
 You can get your API key and Secret as follows
 <ul>
@@ -105,7 +105,7 @@ Other Terms:
 ```javascript
 const request = require('request')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 request.get(baseurl + "/exchange/ticker",function(error, response, body) {
 	console.log(body);
@@ -114,7 +114,7 @@ request.get(baseurl + "/exchange/ticker",function(error, response, body) {
 ```python
 import requests # Install requests module first.
 
-url = "https://api.coindcx.com/exchange/ticker"
+url = "https://api.cosmex.com/exchange/ticker"
 
 response = requests.get(url)
 data = response.json()
@@ -159,7 +159,7 @@ print(data)
 ```javascript
 const request = require('request')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 request.get(baseurl + "/exchange/v1/markets",function(error, response, body) {
 	console.log(body);
@@ -168,7 +168,7 @@ request.get(baseurl + "/exchange/v1/markets",function(error, response, body) {
 ```python
 import requests # Install requests module first.
 
-url = "https://api.coindcx.com/exchange/v1/markets"
+url = "https://api.cosmex.com/exchange/v1/markets"
 
 response = requests.get(url)
 data = response.json()
@@ -198,7 +198,7 @@ Returns an array of strings of currently active markets.
 ```javascript
 const request = require('request')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 request.get(baseurl + "/exchange/v1/markets_details",function(error, response, body) {
 	console.log(body);
@@ -207,7 +207,7 @@ request.get(baseurl + "/exchange/v1/markets_details",function(error, response, b
 ```python
 import requests # Install requests module first.
 
-url = "https://api.coindcx.com/exchange/v1/markets_details"
+url = "https://api.cosmex.com/exchange/v1/markets_details"
 
 response = requests.get(url)
 data = response.json()
@@ -218,7 +218,7 @@ print(data)
 ```json
 [
   {
-    "coindcx_name": "SNMBTC",
+    "cosmex_name": "SNMBTC",
     "base_currency_short_name": "BTC",
     "target_currency_short_name": "SNM",
     "target_currency_name": "Sonm",
@@ -258,7 +258,7 @@ print(data)
 
 ## Trades
 
-<aside class="notice">The base URL for Trades API call is https://public.coindcx.com </aside>
+<aside class="notice">The base URL for Trades API call is https://public.cosmex.com </aside>
 
 ### HTTP request
 `GET /market_data/trade_history`
@@ -266,7 +266,7 @@ print(data)
 ```python
 import requests # Install requests module first.
 
-url = "https://public.coindcx.com/market_data/trade_history?pair=B-BTC_USDT&limit=50" # Replace 'B-BTC_USDT' with your desired market pair.
+url = "https://public.cosmex.com/market_data/trade_history?pair=B-BTC_USDT&limit=50" # Replace 'B-BTC_USDT' with your desired market pair.
 
 response = requests.get(url)
 data = response.json()
@@ -275,7 +275,7 @@ print(data)
 ```javascript
 const request = require('request')
 
-var baseurl = "https://public.coindcx.com"
+var baseurl = "https://public.cosmex.com"
 
 // Replace the "B-BTC_USDT" with the desired market pair.
 request.get(baseurl + "/market_data/trade_history?pair=B-BTC_USDT&limit=50",function(error, response, body) {
@@ -317,12 +317,12 @@ This API provides with a sorted list of most recent 30 trades by default if limi
 
 
 ## Order book
-<aside class="notice">The base URL for Order book API call is https://public.coindcx.com </aside>
+<aside class="notice">The base URL for Order book API call is https://public.cosmex.com </aside>
 
 ```javascript
 const request = require('request')
 
-var baseurl = "https://public.coindcx.com"
+var baseurl = "https://public.cosmex.com"
 
 // Replace the "B-BTC_USDT" with the desired market pair.
 request.get(baseurl + "/market_data/orderbook?pair=B-BTC_USDT",function(error, response, body) {
@@ -332,7 +332,7 @@ request.get(baseurl + "/market_data/orderbook?pair=B-BTC_USDT",function(error, r
 ```python
 import requests # Install requests module first.
 
-url = "https://public.coindcx.com/market_data/orderbook?pair=B-BTC_USDT" # Replace 'SNTBTC' with the desired market pair.
+url = "https://public.cosmex.com/market_data/orderbook?pair=B-BTC_USDT" # Replace 'SNTBTC' with the desired market pair.
 
 response = requests.get(url)
 data = response.json()
@@ -382,12 +382,12 @@ This API provides with a sorted list (in descending order) of bids and asks.
 
 
 ## Candles
-<aside class="notice">The base URL for Candles API call is https://public.coindcx.com </aside>
+<aside class="notice">The base URL for Candles API call is https://public.cosmex.com </aside>
 
 ```javascript
 const request = require('request')
 
-var baseurl = "https://public.coindcx.com"
+var baseurl = "https://public.cosmex.com"
 
 // Replace the "B-BTC_USDT" with the desired market pair.
 request.get(baseurl + "/market_data/candles?pair=B-BTC_USDT&interval=1m",function(error, response, body) {
@@ -397,7 +397,7 @@ request.get(baseurl + "/market_data/candles?pair=B-BTC_USDT&interval=1m",functio
 ```python
 import requests # Install requests module first.
 
-url = "https://public.coindcx.com/market_data/candles?pair=B-BTC_USDT&interval=1m" # Replace 'SNTBTC' with the desired market pair.
+url = "https://public.cosmex.com/market_data/candles?pair=B-BTC_USDT&interval=1m" # Replace 'SNTBTC' with the desired market pair.
 
 response = requests.get(url)
 data = response.json()
@@ -497,7 +497,7 @@ m -> minutes, h -> hours, d -> days, w -> weeks, M -> months
     'X-AUTH-SIGNATURE' => signature
   }
 
-  uri = URI.parse("https://api.coindcx.com/exchange/v1/orders/create")
+  uri = URI.parse("https://api.cosmex.com/exchange/v1/orders/create")
 
   https = Net::HTTP.new(uri.host, uri.port)
   https.use_ssl = true
@@ -543,7 +543,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/create"
+url = "https://api.cosmex.com/exchange/v1/orders/create"
 
 headers = {
     'Content-Type': 'application/json',
@@ -565,7 +565,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 
@@ -659,7 +659,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/users/balances"
+url = "https://api.cosmex.com/exchange/v1/users/balances"
 
 headers = {
     'Content-Type': 'application/json',
@@ -680,7 +680,7 @@ print(data);
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -768,7 +768,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/users/info"
+url = "https://api.cosmex.com/exchange/v1/users/info"
 
 headers = {
     'Content-Type': 'application/json',
@@ -789,7 +789,7 @@ print(data);
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -827,15 +827,15 @@ request.post(options, function(error, response, body) {
 ```json
 [
   {
-    "coindcx_id": "fda259ce-22fc-11e9-ba72-ef9b29b5db2b",
+    "cosmex_id": "fda259ce-22fc-11e9-ba72-ef9b29b5db2b",
     "first_name": "First name",
     "last_name": "Last name",
     "mobile_number": "000000000",
-    "email": "test@coindcx.com"
+    "email": "test@cosmex.com"
   }
 ]
 ```
-> coindcx_id is the user id
+> cosmex_id is the user id
 
 This endpoint retrieves user info.
 
@@ -896,7 +896,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/create"
+url = "https://api.cosmex.com/exchange/v1/orders/create"
 
 headers = {
     'Content-Type': 'application/json',
@@ -917,7 +917,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 
@@ -1057,7 +1057,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/create_multiple"
+url = "https://api.cosmex.com/exchange/v1/orders/create_multiple"
 
 headers = {
     'Content-Type': 'application/json',
@@ -1078,7 +1078,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 
@@ -1203,7 +1203,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/status"
+url = "https://api.cosmex.com/exchange/v1/orders/status"
 
 headers = {
     'Content-Type': 'application/json',
@@ -1224,7 +1224,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -1327,7 +1327,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/status_multiple"
+url = "https://api.cosmex.com/exchange/v1/orders/status_multiple"
 
 headers = {
     'Content-Type': 'application/json',
@@ -1348,7 +1348,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -1455,7 +1455,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/active_orders"
+url = "https://api.cosmex.com/exchange/v1/orders/active_orders"
 
 headers = {
     'Content-Type': 'application/json',
@@ -1476,7 +1476,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -1583,7 +1583,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/trade_history"
+url = "https://api.cosmex.com/exchange/v1/orders/trade_history"
 
 headers = {
     'Content-Type': 'application/json',
@@ -1600,7 +1600,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -1702,7 +1702,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/active_orders_count"
+url = "https://api.cosmex.com/exchange/v1/orders/active_orders_count"
 
 headers = {
     'Content-Type': 'application/json',
@@ -1723,7 +1723,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -1815,7 +1815,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/cancel_all"
+url = "https://api.cosmex.com/exchange/v1/orders/cancel_all"
 
 headers = {
     'Content-Type': 'application/json',
@@ -1836,7 +1836,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -1935,7 +1935,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/cancel_by_ids"
+url = "https://api.cosmex.com/exchange/v1/orders/cancel_by_ids"
 
 headers = {
     'Content-Type': 'application/json',
@@ -1956,7 +1956,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -2044,7 +2044,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/cancel"
+url = "https://api.cosmex.com/exchange/v1/orders/cancel"
 
 headers = {
     'Content-Type': 'application/json',
@@ -2065,7 +2065,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -2155,7 +2155,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/orders/edit"
+url = "https://api.cosmex.com/exchange/v1/orders/edit"
 
 headers = {
     'Content-Type': 'application/json',
@@ -2172,7 +2172,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -2292,7 +2292,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/funding/fetch_orders"
+url = "https://api.cosmex.com/exchange/v1/funding/fetch_orders"
 
 headers = {
     'Content-Type': 'application/json',
@@ -2313,7 +2313,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -2426,7 +2426,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/funding/lend"
+url = "https://api.cosmex.com/exchange/v1/funding/lend"
 
 headers = {
     'Content-Type': 'application/json',
@@ -2447,7 +2447,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 
@@ -2545,7 +2545,7 @@ secret_bytes = bytes(secret)
 timeStamp = int(round(time.time() * 1000))
 
 body = {
-  "id": "ead19992-43fd-11e8-b027-bb815bcb14ed",  
+  "id": "ead19992-43fd-11e8-b027-bb815bcb14ed",
   "timestamp": timeStamp
 }
 
@@ -2553,7 +2553,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/funding/settle"
+url = "https://api.cosmex.com/exchange/v1/funding/settle"
 
 headers = {
     'Content-Type': 'application/json',
@@ -2574,7 +2574,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -2586,7 +2586,7 @@ secret = "";
 
 
 body = {
-  "id": "ead19992-43fd-11e8-b027-bb815bcb14ed", 
+  "id": "ead19992-43fd-11e8-b027-bb815bcb14ed",
   "timestamp": timeStamp
 }
 
@@ -2697,7 +2697,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/margin/create"
+url = "https://api.cosmex.com/exchange/v1/margin/create"
 
 headers = {
     'Content-Type': 'application/json',
@@ -2718,7 +2718,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 
@@ -2874,7 +2874,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/margin/cancel"
+url = "https://api.cosmex.com/exchange/v1/margin/cancel"
 
 headers = {
     'Content-Type': 'application/json',
@@ -2895,7 +2895,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -2992,7 +2992,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/margin/exit"
+url = "https://api.cosmex.com/exchange/v1/margin/exit"
 
 headers = {
     'Content-Type': 'application/json',
@@ -3013,7 +3013,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -3110,7 +3110,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/margin/edit_target"
+url = "https://api.cosmex.com/exchange/v1/margin/edit_target"
 
 headers = {
     'Content-Type': 'application/json',
@@ -3131,7 +3131,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -3229,7 +3229,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/margin/edit_price_of_target_order"
+url = "https://api.cosmex.com/exchange/v1/margin/edit_price_of_target_order"
 
 headers = {
   'Content-Type': 'application/json',
@@ -3250,7 +3250,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -3349,7 +3349,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/margin/edit_sl"
+url = "https://api.cosmex.com/exchange/v1/margin/edit_sl"
 
 headers = {
     'Content-Type': 'application/json',
@@ -3366,7 +3366,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -3462,7 +3462,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/margin/edit_trailing_sl"
+url = "https://api.cosmex.com/exchange/v1/margin/edit_trailing_sl"
 
 headers = {
     'Content-Type': 'application/json',
@@ -3479,7 +3479,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -3573,7 +3573,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/margin/add_margin"
+url = "https://api.cosmex.com/exchange/v1/margin/add_margin"
 
 headers = {
     'Content-Type': 'application/json',
@@ -3590,7 +3590,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -3683,7 +3683,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/margin/remove_margin"
+url = "https://api.cosmex.com/exchange/v1/margin/remove_margin"
 
 headers = {
     'Content-Type': 'application/json',
@@ -3700,7 +3700,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -3796,7 +3796,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/margin/fetch_orders"
+url = "https://api.cosmex.com/exchange/v1/margin/fetch_orders"
 
 headers = {
     'Content-Type': 'application/json',
@@ -3817,7 +3817,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -3999,8 +3999,8 @@ secret_bytes = bytes(secret)
 timeStamp = int(round(time.time() * 1000))
 
 body = {
-  "details": true,  
-  "id": "30b5002f-d9c1-413d-8a8d-0fd32b054c9c", 
+  "details": true,
+  "id": "30b5002f-d9c1-413d-8a8d-0fd32b054c9c",
   "timestamp": timeStamp
 }
 
@@ -4008,7 +4008,7 @@ json_body = json.dumps(body, separators = (',', ':'))
 
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
-url = "https://api.coindcx.com/exchange/v1/margin/order"
+url = "https://api.cosmex.com/exchange/v1/margin/order"
 
 headers = {
     'Content-Type': 'application/json',
@@ -4029,7 +4029,7 @@ print(data)
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -4041,8 +4041,8 @@ secret = "";
 
 
 body = {
-  "details": true,  
-  "id": "30b5002f-d9c1-413d-8a8d-0fd32b054c9c", 
+  "details": true,
+  "id": "30b5002f-d9c1-413d-8a8d-0fd32b054c9c",
   "timestamp": timeStamp
 }
 
@@ -4142,7 +4142,7 @@ Get the pagination details in the response header
 const request = require('request')
 const crypto = require('crypto')
 
-var baseurl = "https://api.coindcx.com"
+var baseurl = "https://api.cosmex.com"
 
 var timeStamp = Math.floor(Date.now());
 // To check if the timestamp is correct
@@ -4222,7 +4222,7 @@ Refer to the right panel.
 ```python
 import socketio
 
-socketEndpoint = 'wss://stream.coindcx.com'
+socketEndpoint = 'wss://stream.cosmex.com'
 sio = socketio.Client()
 
 sio.connect(socketEndpoint, transports = 'websocket')
@@ -4241,7 +4241,7 @@ sio.emit('leave', { 'channelName' : channelName })
 ```javascript
 import io from 'socket.io-client';
 
-const socketEndpoint = "wss://stream.coindcx.com";
+const socketEndpoint = "wss://stream.cosmex.com";
 
 const socket = io(socketEndpoint, {
   transports: ['websocket']
@@ -4363,7 +4363,7 @@ import socketio
 import hmac
 import hashlib
 import json
-socketEndpoint = 'wss://stream.coindcx.com'
+socketEndpoint = 'wss://stream.cosmex.com'
 sio = socketio.Client()
 
 sio.connect(socketEndpoint, transports = 'websocket')
@@ -4376,12 +4376,12 @@ secret_bytes = bytes(secret, encoding='utf-8')
 # python2
 secret_bytes = bytes(secret)
 
-body = {"channel":"coindcx"}
+body = {"channel":"cosmex"}
 json_body = json.dumps(body, separators = (',', ':'))
 signature = hmac.new(secret_bytes, json_body.encode(), hashlib.sha256).hexdigest()
 
 # Join channel
-sio.emit('join', { 'channelName': 'coindcx', 'authSignature': signature, 'apiKey' : key })
+sio.emit('join', { 'channelName': 'cosmex', 'authSignature': signature, 'apiKey' : key })
 
 # Listen update on eventName
 @sio.on('eventName')
@@ -4389,14 +4389,14 @@ def on_message(response):
     print(response.data)
 
 # leave a channel
-sio.emit('leave', { 'channelName' : 'coindcx' })
+sio.emit('leave', { 'channelName' : 'cosmex' })
 
 ```
 
 ```javascript
 
 import io from 'socket.io-client';
-const socketEndpoint = "wss://stream.coindcx.com";
+const socketEndpoint = "wss://stream.cosmex.com";
 
 //connect to server.
 const socket = io(socketEndpoint, {
@@ -4407,13 +4407,13 @@ const secret = "secret";
 const key = "key";
 
 
-const body = { channel: "coindcx" };
+const body = { channel: "cosmex" };
 const payload = new Buffer(JSON.stringify(body)).toString();
 const signature = crypto.createHmac('sha256', secret).update(payload).digest('hex')
 
 //Join channel
 socket.emit('join', {
-  'channelName': "coindcx",
+  'channelName': "cosmex",
   'authSignature': signature,
   'apiKey' : key
 });
@@ -4427,7 +4427,7 @@ socket.on("eventName", (response) => {
 
 // In order to leave a channel
 socket.emit('leave', {
-  'channelName': 'coindcx'
+  'channelName': 'cosmex'
 });
 ```
 
@@ -4435,7 +4435,7 @@ socket.emit('leave', {
 
 ### Definitions
 <ul>
-  <li><strong>Channel:</strong> coindcx</li>
+  <li><strong>Channel:</strong> cosmex</li>
   <li><strong>Event:</strong> balance-update</li>
 </ul>
 
@@ -4476,7 +4476,7 @@ socket.on("balance-update", (response) => {
 
 ### Definitions
 <ul>
-  <li><strong>Channel:</strong> coindcx</li>
+  <li><strong>Channel:</strong> cosmex</li>
   <li><strong>Event:</strong> trade-update</li>
 </ul>
 
@@ -4529,13 +4529,13 @@ socket.on("trade-update", (response) => {
 
 # API call limits
 We have rate limits in place to facilitate availability of our resources to a wider set of people. Typically you can place around 4 orders per second. The exact number depends on the server load.
-In aggregate, you may call `https//api.coindcx.com` not more than 10 times per second. -->
+In aggregate, you may call `https//api.cosmex.com` not more than 10 times per second. -->
 
 ## Bracket Order Trades
 
 ### Definitions
 <ul>
-  <li><strong>Channel:</strong> coindcx</li>
+  <li><strong>Channel:</strong> cosmex</li>
   <li><strong>Event:</strong> bo-trade-update</li>
 </ul>
 
@@ -4633,4 +4633,4 @@ socket.on("bo-trade-update", (response) => {
 
 # API call limits
 We have rate limits in place to facilitate availability of our resources to a wider set of people. Typically you can place around 4 orders per second. The exact number depends on the server load.
-In aggregate, you may call `https//api.coindcx.com` not more than 10 times per second. -->
+In aggregate, you may call `https//api.cosmex.com` not more than 10 times per second. -->
